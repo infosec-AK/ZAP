@@ -6,6 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Scan ZAP website
     steps:
+
+      - name: checkout
+        uses: actions/checkout@4
+        with:
+          ref: main
+          
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.10.0
         with:
