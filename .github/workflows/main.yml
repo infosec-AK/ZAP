@@ -17,4 +17,3 @@ jobs:
         run: |
           echo: "zap scan failed"
           exit 1
-          
