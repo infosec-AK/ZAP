@@ -12,6 +12,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+      - name: Create and set permissions for ZAP working directory
+        run: |
+          mkdir -p /home/runner/work/ZAP/ZAP
+          sudo chmod -R 777 /home/runner/work/ZAP/ZAP
+          sudo chown -R $(id -u):$(id -g) /home/runner/work/ZAP/ZAP
 
       - name: Run ZAP Scan
         id: zap_scan_step
