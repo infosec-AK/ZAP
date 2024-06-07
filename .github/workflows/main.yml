@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+  
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: Scan ZAP website
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.10.0
+        with:
+          target: 'https://www.zaproxy.org/'
