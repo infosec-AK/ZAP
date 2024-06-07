@@ -17,6 +17,7 @@ jobs:
         id: zap_scan_step
         uses: zaproxy/action-baseline@v0.11.0
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://google.com/'
           
       - name: Save ZAP scan results
