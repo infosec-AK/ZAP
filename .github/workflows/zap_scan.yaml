@@ -3,7 +3,7 @@ name: OWASP ZAP Integration with GitHub Actions
 on:
   schedule:
     # Runs every month at 9am UTC time.
-    - cron: '30 10 * * *'
+    - cron: '6 10 * * *'
 
 jobs:
   zap_scan:
